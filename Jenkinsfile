@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image and tag it
-                    docker.build("samirouche99/nodejs-web-app:latest -f Dockerfile .")
+                    docker.build("samirouche99/nodejs-web-app:latest","-f Dockerfile .")
                 }
             }
         }

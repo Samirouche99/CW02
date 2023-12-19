@@ -32,17 +32,7 @@ pipeline {
                     // Push Docker image to DockerHub
                     docker.withRegistry('https://registry.hub.docker.com', 'Dockerhub') {
                         docker.image("samirouche99/nodejs-web-app:latest").push()
-                    }
-                }
-            }
-        }
-        stage('Deploy to Kubernetes') {
-            steps {
-                script {
-                    // You may add Kubernetes deployment commands here
-                    // For example, apply a Kubernetes manifest file
-                    sh 'kubectl apply -f your-kubernetes-manifest.yaml'
-                }
+             }   }
             }
         }
     }
